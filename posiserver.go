@@ -24,8 +24,8 @@ func (server *Posiserver) Run() {
 	go writer.WriteTargetsLoop(config)
 
 	// Listen port 3000
-	fs := http.FileServer(http.Dir("static"))
+	fs := http.FileServer(http.Dir(config.RootPath))
 	http.Handle("/", fs)
-	http.ListenAndServe(":3000", nil)
 	fmt.Println("Listen port 3000.")
+	http.ListenAndServe(":3000", nil)
 }

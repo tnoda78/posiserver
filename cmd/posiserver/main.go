@@ -9,8 +9,6 @@ import (
 )
 
 func main() {
-	fmt.Println("[posiserver] strat.")
-
 	defer func() {
 		if err := recover(); err != nil {
 			fmt.Fprintf(os.Stderr, "Error:%s\n", err)

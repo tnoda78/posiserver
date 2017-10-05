@@ -1,5 +1,5 @@
 static
-config.toml
+config.yml
 vendor
 dist
 releases
