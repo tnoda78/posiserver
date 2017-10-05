@@ -2,3 +2,4 @@ static
 config.toml
 vendor
 dist
+releases
