@@ -1,0 +1,3 @@
+package: posiserver
+import:
+- package: gopkg.in/yaml.v2

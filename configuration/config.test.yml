@@ -1,0 +1,7 @@
+root_path: static
+write_files:
+  - path: static/data/areas/1.json
+    interval: 5
+    data:
+      - "{'1': '1'}"
+      - "{'2': '2'}"
