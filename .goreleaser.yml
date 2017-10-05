@@ -1,5 +1,6 @@
 builds:
-  - binary: posiserver
+  - main: cmd/posiserver/main.go
+    binary: posiserver
     goos:
       - windows
       - darwin
