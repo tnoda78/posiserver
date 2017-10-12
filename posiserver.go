@@ -25,7 +25,14 @@ func (server *Posiserver) Run() {
 
 	// Listen port 3000
 	fs := http.FileServer(http.Dir(config.RootPath))
-	http.Handle("/", fs)
+	http.Handle("/", handleCORS(fs))
 	fmt.Println("Listen port 3000.")
 	http.ListenAndServe(":3000", nil)
+}
+
+func handleCORS(h http.Handler) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Add("Access-Control-Allow-Origin", "*")
+		h.ServeHTTP(w, r)
+	}
 }
