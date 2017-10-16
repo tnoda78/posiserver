@@ -3,3 +3,6 @@ language: go
 go:
   - 1.x
   - 1.9.1
+
+script:
+  - make test
