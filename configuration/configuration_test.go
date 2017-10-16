@@ -21,7 +21,7 @@ func TestLoadConfigFile(t *testing.T) {
 
 	_, err := config.LoadConfigFile(env)
 
-	if err != nil {
+	if err == nil {
 		t.Errorf("should not raise error.%v", err)
 	}
 
